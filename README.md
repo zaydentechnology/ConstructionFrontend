@@ -56,9 +56,7 @@ The current portfolio is deliberately marked as **illustrative sample content**.
 
 ## Contact form behavior
 
-The inquiry form in `src/pages/ContactPage.tsx` validates the essential fields then opens the visitor’s email application with a pre-filled message. It does not submit, store, or fake success states.
-
-To collect inquiries directly later, replace that email action with a configured third-party form service or a genuine backend endpoint.
+The inquiry form in `src/pages/ContactPage.tsx` validates the essential fields then opens a pre-filled WhatsApp message to `+91 84319 45251`. It does not submit, store, or fake success states. Visitors tap **Send** in WhatsApp, and can attach files there if required.
 
 ## Placeholder imagery
 

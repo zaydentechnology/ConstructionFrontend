@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom'
 import { Footer } from './components/Footer'
 import { Navigation } from './components/Navigation'
 import { ScrollToTop } from './components/ScrollToTop'
+import { WhatsAppFloat } from './components/WhatsAppFloat'
 import { AboutPage } from './pages/AboutPage'
 import { ContactPage } from './pages/ContactPage'
 import { HomePage } from './pages/HomePage'
@@ -22,4 +23,4 @@ function RoutedContent() {
   return <AnimatePresence mode="wait"><motion.main key={location.pathname} initial={reduced ? false : { opacity: 0 }} animate={{ opacity: 1 }} exit={reduced ? {} : { opacity: 0 }} transition={{ duration: .22 }}><Routes location={location}><Route path="/" element={<HomePage />} /><Route path="/about" element={<AboutPage />} /><Route path="/services" element={<ServicesPage />} /><Route path="/services/:slug" element={<ServiceDetailPage />} /><Route path="/projects" element={<ProjectsPage />} /><Route path="/projects/:slug" element={<ProjectDetailPage />} /><Route path="/sustainability" element={<SustainabilityPage />} /><Route path="/contact" element={<ContactPage />} /><Route path="*" element={<NotFoundPage />} /></Routes></motion.main></AnimatePresence>
 }
 
-export default function App() { return <><Navigation /><RoutedContent /><Footer /><ScrollToTop /></> }
+export default function App() { return <><Navigation /><RoutedContent /><Footer /><WhatsAppFloat /><ScrollToTop /></> }
